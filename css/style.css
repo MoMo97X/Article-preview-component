@@ -1,0 +1,148 @@
+/* --------- setting env. ----------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* ***** Primary Color ***** */
+  --Very-Dark-GrayishBlue: #48556a;
+  --Desaturated-DarkBlue: #6d7f97;
+  --GrayishBlue: #9eafc2;
+  --Light-GrayishBlue: #ecf2f8;
+
+  /* ***** Neutral Color ***** */
+  --White: #ffffff;
+  --shadow: #dddddd;
+
+  /* ----- font:- size, weight ----- */
+  --fs: 0.813rem;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+/* ------ Global Rule's ------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--fs);
+  background-color: var(--Light-GrayishBlue);
+  font-family: "Manrope", system-ui, "Segoe UI", Ubuntu, sans-serif;
+  overflow: hidden;
+  padding: 1.25rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin-block: 0;
+}
+/* --------- Strat --------- */
+
+/* ######## card image ######## */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 22.5rem;
+  background-color: var(--White);
+  border-radius: 1.25rem;
+}
+
+.card .wrap .card-image {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* ######## card text ######## */
+.card .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--White);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.card-info .card-info-title {
+  line-height: 1.4;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-block-end: 1.25rem;
+  color: var(--Very-Dark-GrayishBlue);
+}
+
+.card-info .card-info-description {
+  width: 31ch;
+  margin-block-end: 1.875rem;
+  color: var(--GrayishBlue);
+  text-align: left;
+  line-height: 1.5;
+  font-size: var(--fs);
+  font-weight: 500;
+}
+
+.card-info .card-info-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-info-contact .card-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.card-meta .card-meta-info {
+  margin-inline-start: 0.75rem;
+}
+
+.card-info-contact .card-meta .avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.card-info-contact .card-meta h2 {
+  margin-block-end: 0.2rem;
+  color: var(--Very-Dark-GrayishBlue);
+  font-size: calc(var(--fs) + 0.15rem);
+  font-weight: 700;
+}
+
+.card-info-contact .card-meta data {
+  color: var(--GrayishBlue);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.card-info-contact .fa-stack {
+  font-size: 1.1rem;
+}
+
+.card-info-contact .circle {
+  color: var(--Light-GrayishBlue);
+}
+
+.card-info-contact .share-arrow {
+  color: var(--Desaturated-DarkBlue);
+}
+
+/* --------- End --------- */
