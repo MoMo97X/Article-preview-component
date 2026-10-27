@@ -107,7 +107,6 @@ ul {
 
 .card-info .card-info-contact {
   width: 100%;
-  /* position: relative; */
 }
 
 .card-info-contact .author-section {
@@ -220,7 +219,7 @@ ul {
 .share-box .socila-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .share-box.active {
