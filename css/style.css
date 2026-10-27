@@ -33,7 +33,7 @@ body {
   background-color: var(--Light-GrayishBlue);
   font-family: "Manrope", system-ui, Ubuntu, sans-serif;
   overflow: hidden;
-  padding: 5rem;
+  padding: 3rem;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -228,6 +228,10 @@ ul {
 
 /* **** Media Query **** */
 @media (min-width: 48rem) {
+  body {
+    padding: 0;
+  }
+
   .card {
     width: 70%;
     flex-direction: row;
