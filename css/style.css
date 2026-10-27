@@ -31,9 +31,9 @@ html {
 body {
   font-size: var(--fs);
   background-color: var(--Light-GrayishBlue);
-  font-family: "Manrope", system-ui, "Segoe UI", Ubuntu, sans-serif;
+  font-family: "Manrope", system-ui, Ubuntu, sans-serif;
   overflow: hidden;
-  padding: 1.25rem;
+  padding: 5rem;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -43,7 +43,8 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -55,7 +56,6 @@ p {
 ul {
   padding: 0;
   list-style: none;
-  /* border: 1px solid red; */
 }
 
 /* --------- Strat --------- */
@@ -65,10 +65,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  width: 22.5rem;
-  background-color: var(--White);
-  border-radius: 1.25rem;
   position: relative;
+  border-radius: 1.25rem;
+  background-color: var(--White);
+  box-shadow: 11px 11px 20px 0px var(--shadow);
 }
 
 .card .wrap .card-image {
@@ -89,19 +89,18 @@ ul {
 
 .card-info .card-info-title {
   line-height: 1.4;
-  font-size: 1.15rem;
+  font-size: clamp(1.25rem, 2vw, 3rem);
   font-weight: 700;
   margin-block-end: 1.25rem;
   color: var(--Very-Dark-GrayishBlue);
 }
 
 .card-info .card-info-description {
-  width: 31ch;
   margin-block-end: 1.875rem;
   color: var(--GrayishBlue);
   text-align: left;
-  line-height: 1.5;
-  font-size: var(--fs);
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.5vw, 3rem);
   font-weight: 500;
 }
 
@@ -225,4 +224,45 @@ ul {
 .share-box.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* **** Media Query **** */
+@media (min-width: 48rem) {
+  .card {
+    flex-direction: row;
+    overflow: visible;
+  }
+
+  .card .wrap {
+    flex: 1;
+  }
+
+  .card .wrap .card-image {
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+
+  .card .card-info {
+    flex: 1;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    justify-content: space-evenly;
+  }
+
+  .share-box {
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    bottom: 45%;
+    right: 0;
+    left: auto;
+    transform: translate(20%, 100%);
+    border-radius: 0.75rem;
+  }
+
+  .share-box .left {
+    margin-inline: 0;
+  }
+
+  .share-box .close-btn {
+    display: none;
+  }
 }
