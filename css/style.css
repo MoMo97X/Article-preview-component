@@ -229,6 +229,7 @@ ul {
 /* **** Media Query **** */
 @media (min-width: 48rem) {
   .card {
+    width: 70%;
     flex-direction: row;
     overflow: visible;
   }
@@ -242,7 +243,7 @@ ul {
   }
 
   .card .card-info {
-    flex: 1;
+    flex: 2;
     padding: 1.25rem;
     border-radius: 0.75rem;
     justify-content: space-evenly;
