@@ -28,35 +28,36 @@
     />
     <style>
       .attribution {
+        margin-block-start: 1rem;
         font-size: 0.6875rem;
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: var(--Very-Dark-GrayishBlue);
       }
     </style>
   </head>
   <body>
-    <main class="wrapper">
-      <article class="card">
-        <div class="wrap">
-          <img
-            class="card-image"
-            src="images/drawers.jpg"
-            alt="drawers with picture and a vas full of wheat"
-          />
-        </div>
-        <div class="card-info">
-          <h1 class="card-info-title">
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h1>
-          <p class="card-info-description">
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
-          </p>
-          <div class="card-info-contact">
+    <main class="card">
+      <div class="wrap">
+        <img
+          class="card-image"
+          src="images/drawers.jpg"
+          alt="drawers with picture and a vas full of wheat"
+        />
+      </div>
+      <div class="card-info">
+        <h1 class="card-info-title">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="card-info-description">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="card-info-contact">
+          <div class="author-section">
             <div class="card-meta">
               <img
                 class="avatar"
@@ -69,19 +70,33 @@
                 <data value="28 Jun 2020">28 Jun 2020</data>
               </div>
             </div>
-            <span class="fa-stack">
-              <i class="fa-solid fa-circle fa-stack-2x circle"></i>
-              <i class="fa-solid fa-share fa-stack-1x share-arrow"></i>
-            </span>
+            <div class="circle open-btn">
+              <i class="fa-solid fa-share share-arrow"></i>
+            </div>
+          </div>
+          <div class="share-box">
+            <div class="left"> 
+              <span> SHARE </span>
+                <ul class="socila-link">
+                  <li><a href="facebook.com"><img src="/images/icon-facebook.svg"></img></a></li>
+                  <li><a href="twitter.com"><img src="/images/icon-twitter.svg"></img></a></li>
+                <li><a href="pinterest.com"><img src="/images/icon-pinterest.svg"></a></img></li>
+              </ul>
+            </div>
+            <div class="circle active-circle close-btn">
+              <i class="fa-solid fa-share share-arrow active-btn"></i>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
     </main>
 
-    <!-- <footer class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
-    </footer> -->
+    </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
