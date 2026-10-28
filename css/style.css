@@ -33,7 +33,7 @@ body {
   background-color: var(--Light-GrayishBlue);
   font-family: "Manrope", system-ui, Ubuntu, sans-serif;
   overflow: hidden;
-  padding: 3rem;
+  padding: min(1.5rem, 3rem);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -45,6 +45,7 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 h1,
@@ -64,7 +65,7 @@ ul {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  /* gap: 1.25rem; */
   position: relative;
   border-radius: 1.25rem;
   background-color: var(--White);
@@ -100,7 +101,7 @@ ul {
   color: var(--GrayishBlue);
   text-align: left;
   line-height: 1.6;
-  font-size: clamp(1rem, 1.5vw, 3rem);
+  font-size: min(1.15rem, 1.5rem);
   font-weight: 500;
 }
 
@@ -183,6 +184,12 @@ ul {
     visibility 0.3s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .share-box {
+    transition: none;
+  }
+}
+
 .share-box .left {
   display: flex;
   justify-content: space-around;
@@ -208,7 +215,7 @@ ul {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  visibility: none;
+  visibility: hidden;
 }
 
 .share-box .circle .share-arrow {
@@ -228,12 +235,7 @@ ul {
 
 /* **** Media Query **** */
 @media (min-width: 48rem) {
-  body {
-    padding: 0;
-  }
-
   .card {
-    width: 70%;
     flex-direction: row;
     overflow: visible;
   }
@@ -248,9 +250,9 @@ ul {
 
   .card .card-info {
     flex: 2;
-    padding: 1.25rem;
+    padding: 2rem;
     border-radius: 0.75rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .share-box {
