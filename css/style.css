@@ -65,7 +65,7 @@ ul {
 .card {
   display: flex;
   flex-direction: column;
-  /* gap: 1.25rem; */
+  max-width: 50rem;
   position: relative;
   border-radius: 1.25rem;
   background-color: var(--White);
@@ -90,7 +90,7 @@ ul {
 
 .card-info .card-info-title {
   line-height: 1.4;
-  font-size: clamp(1.25rem, 2vw, 3rem);
+  font-size: clamp(1.25rem, 1vw, 2rem);
   font-weight: 700;
   margin-block-end: 1.25rem;
   color: var(--Very-Dark-GrayishBlue);
@@ -101,7 +101,7 @@ ul {
   color: var(--GrayishBlue);
   text-align: left;
   line-height: 1.6;
-  font-size: min(1.15rem, 1.5rem);
+  font-size: min(1.15rem, 1.1rem);
   font-weight: 500;
 }
 
